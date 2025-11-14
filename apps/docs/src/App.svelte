@@ -14,7 +14,7 @@
             <img src={viteLogo} class="logo" alt="Vite Logo" />
         </a>
 
-		<a href="https://www.shadcn-svelte.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-20">
+		<a href="https://www.shadcn-svelte.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-20" aria-label="shadcn-svelte">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 256 256"

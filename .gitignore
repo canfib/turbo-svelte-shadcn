@@ -28,3 +28,7 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+# SvelteKit UI package generated types
+/packages/*/src/**/*.d.ts
+/packages/*/src/**/*.d.ts.map

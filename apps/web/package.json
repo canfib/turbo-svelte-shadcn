@@ -21,6 +21,7 @@
 	"devDependencies": {
 		"@playwright/test": "^1.56.1",
 		"@repo/eslint-config": "workspace:*",
+    	"@repo/typescript-config": "workspace:*",
 		"@sveltejs/adapter-auto": "^7.0.0",
 		"@sveltejs/kit": "^2.48.5",
 		"@sveltejs/vite-plugin-svelte": "^6.2.1",

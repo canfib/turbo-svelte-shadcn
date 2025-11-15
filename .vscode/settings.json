@@ -3,5 +3,15 @@
     {
       "mode": "auto"
     }
-  ]
+  ],
+    "files.exclude": {
+    "**/.svelte-kit": true,
+    "**/.turbo": true,
+    "**/node_modules": true,
+    "**/pnpm-lock.yaml": true,
+
+    // Hide the generated type files
+    "**/packages/*/src/**/*.d.ts": true,
+    "**/packages/*/src/**/*.d.ts.map": true
+  }
 }

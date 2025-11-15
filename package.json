@@ -5,7 +5,8 @@
     "dev": "turbo run dev",
     "ui:add": "pnpm --filter @repo/ui ui:add",
     "lint": "turbo run lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "check": "turbo run check"
   },
   "devDependencies": {
     "prettier": "^3.6.2",

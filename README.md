@@ -39,9 +39,9 @@ This repo includes the following packages/apps:
 ### Apps and Packages
 
 - 🌐 `web`: A [SvelteKit](https://kit.svelte.dev/) app
-- 🌐 `docs`: A [Vite](https://vite.dev/) app
 - 🎨 `@repo/ui`: A svelte component library powered by [**shadcn-svelte**](https://www.shadcn-svelte.com/) 🔥🚀
 - ⚙️ `@repo/eslint-config`: `eslint` configurations (includes `svelte-eslint-parser` and `eslint-config-prettier`)
+- ⚙️ `@repo/typescript-config`: `typescript` configurations
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 

@@ -3,19 +3,7 @@
 	"compilerOptions": {
 		"declaration": true,
 		"declarationMap": true,
-		"allowArbitraryExtensions": true,
-		"baseUrl": ".",
-		"paths": {
-			"@repo/ui": ["./src/"],
-			"@repo/ui/*": ["./src/*"],
-			"@repo/ui/utils": ["./src/utils.ts"],
-			"@repo/ui/components": ["./src/components"],
-			"@repo/ui/components/*": ["./src/components/*"],
-			"@repo/ui/hooks": ["./src/hooks"],
-			"@repo/ui/hooks/*": ["./src/hooks/*"],
-			"@repo/ui/lib": ["./src/lib"],
-      		"@repo/ui/lib/*": ["./src/lib/*"]
-		}
+		"allowArbitraryExtensions": true
 	},
 	"include": ["./src/**/*.svelte", "./src/**/*.ts"],
 	"exclude": ["node_modules", "dist"]

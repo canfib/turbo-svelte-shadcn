@@ -1,5 +1,3 @@
-import path from "path";
-
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
 import tailwindcss from '@tailwindcss/vite';
@@ -12,11 +10,6 @@ export default defineConfig({
   build: {
     commonjsOptions: {
       include: [/@repo\/ui/, /node_modules/],
-    },
-  },
-  resolve: {
-    alias: {
-      '@repo/ui': path.resolve("../../packages/ui/src"),
     },
   },
 });

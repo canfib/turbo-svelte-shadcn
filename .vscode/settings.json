@@ -4,7 +4,7 @@
       "mode": "auto"
     }
   ],
-    "files.exclude": {
+  "files.exclude": {
     "**/.svelte-kit": true,
     "**/.turbo": true,
     "**/node_modules": true,
@@ -15,7 +15,7 @@
     "**/packages/*/src/**/*.d.ts.map": true
   },
   "editor.codeActionsOnSave": {
-  "source.fixAll.eslint": true
+    "source.fixAll.eslint": true
   },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",

@@ -70,3 +70,4 @@ This monorepo includes several scripts in the root `package.json` to manage the 
 - `pnpm check`: Runs TypeScript checks for all packages.
 - `pnpm format`: Formats all code with Prettier.
 - `pnpm ui:add`: Adds a new component to the `@repo/ui` package.
+- `pnpm test`: Runs all unit (Vitest) and end-to-end (Playwright) tests.

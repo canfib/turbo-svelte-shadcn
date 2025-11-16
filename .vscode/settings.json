@@ -1,9 +1,5 @@
 {
-  "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
-  ],
+  // Exclusions
   "files.exclude": {
     "**/.svelte-kit": true,
     "**/.turbo": true,
@@ -14,11 +10,23 @@
     "**/packages/*/src/**/*.d.ts": true,
     "**/packages/*/src/**/*.d.ts.map": true
   },
+
+  // ESLint
+  "eslint.validate": ["javascript", "typescript", "svelte"],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
+
+  // Prettier
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Specific
   "[svelte]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

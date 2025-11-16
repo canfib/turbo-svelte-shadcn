@@ -1,53 +1,72 @@
-# Turborepo SvelteKit, Vite, shadcn-svelte starter kit
+# Turborepo + SvelteKit + shadcn-svelte Starter
 
-Turborepo starter kit for SvelteKit, alongside Vite and shadcn-svelte right out of the box.
+A batteries-included monorepo starter kit built with Turborepo, SvelteKit, and shadcn-svelte. This template provides a robust foundation for building a modern web application with a shared UI library.
+
+## What's Inside?
+
+This starter comes pre-configured with a modern tech stack:
+
+- **Framework:** [SvelteKit](https://kit.svelte.dev/)
+- **Monorepo:** [Turborepo](https://turbo.build/repo)
+- **UI:** [shadcn-svelte](https://www.shadcn-svelte.com/) & [Tailwind CSS](https://tailwindcss.com/)
+- **Code Quality:** [TypeScript](https://www.typescriptlang.org/), [ESLint](https://eslint.org/), and [Prettier](https://prettier.io/)
+- **Testing:** [Vitest](https://vitest.dev/) for unit tests and [Playwright](https://playwright.dev/) for E2E tests
+
+## Project Structure
+
+This monorepo is organized into two main parts:
+
+- `apps/web`: The main SvelteKit web application.
+- `packages/ui`: A shared Svelte component library, built with `shadcn-svelte`.
+- `packages/eslint-config`: Shared ESLint configurations used by all apps and packages.
+- `packages/typescript-config`: Shared `tsconfig.json` bases for consistent TypeScript rules.
 
 ## Getting Started
 
-### Install dependencies
+1.  **Install Dependencies:**
+    `pnpm install`
 
-Once cloned, use the following command to install dependencies:
+2.  **Run the Development Server:**
+    This command runs the `dev` script for all apps and packages in the monorepo.
+    `pnpm dev`
+    Your SvelteKit app will be available at `http://localhost:5173`.
 
-```sh
-pnpm install
-```
+## Core Workflow
 
-### Run the app
+Here's the most common workflow for adding new UI and using it in your app.
 
-Use the following command to run the monorepo:
+### 1. Add a New Component
 
-```sh
-pnpm dev
-```
+New `shadcn-svelte` components should be added to the `@repo/ui` package. The `ui:add` script in the root `package.json` makes this easy.
 
+From the **root of the monorepo**, run:
 
-## Adding UI components from shadcn
+`# This will add the 'input' component to packages/ui`
+`pnpm ui:add input`
 
-Use the pre-made script:
+The component will be added to `packages/ui/src/components/` and automatically exported from `packages/ui/src/index.ts`.
 
-```sh
-pnpm ui:add <component-name>
-```
+### 2. Use the Component in Your App
 
-This works the same to [`shadcn-svelte`](https://www.shadcn-svelte.com/) CLI but the components will be created inside `@repo/ui` package to reuse components across different apps in your monorepo.
+You can now import the new component directly into your `apps/web` application (or any other app):
 
+``
+`<script lang="ts">`
+` import { Button } from '@repo/ui';`
+` import { Input } from '@repo/ui'; // Your new component`
+`</script>`
 
-## What's inside?
+`<h1>Welcome to the App</h1>`
+`<Input placeholder="Email..." />`
+`<Button>Sign Up</Button>`
 
-This repo includes the following packages/apps:
+## Available Scripts
 
-### Apps and Packages
+This monorepo includes several scripts in the root `package.json` to manage the entire project:
 
-- 🌐 `web`: A [SvelteKit](https://kit.svelte.dev/) app
-- 🎨 `@repo/ui`: A svelte component library powered by [**shadcn-svelte**](https://www.shadcn-svelte.com/) 🔥🚀
-- ⚙️ `@repo/eslint-config`: `eslint` configurations (includes `svelte-eslint-parser` and `eslint-config-prettier`)
-- ⚙️ `@repo/typescript-config`: `typescript` configurations
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- 🛠️ [TypeScript](https://www.typescriptlang.org/) for static type checking
+- `pnpm build`: Builds all apps for production.
+- `pnpm dev`: Runs all apps and packages in development mode.
+- `pnpm lint`: Lints all code across the monorepo.
+- `pnpm check`: Runs TypeScript checks for all packages.
+- `pnpm format`: Formats all code with Prettier.
+- `pnpm ui:add`: Adds a new component to the `@repo/ui` package.

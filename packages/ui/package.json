@@ -6,6 +6,7 @@
     "dev": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "build": "svelte-kit sync",
     "ui:add": "pnpm dlx shadcn-svelte@latest add",
+    "postui:add": "node scripts/update-ui-exports.mjs",
     "lint": "eslint .",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
